@@ -1,8 +1,9 @@
 import { useState } from "react";
 
 //increase and decrease button with a counter
-export default function Counter() {
-    const [count, setCount] = useState(0);
+export default function Counter({ initialCount = 0 }) {
+    //starting with the initial count from counter.tsx or 0
+    const [count, setCount] = useState(initialCount);
     
     return (
         <div style={{ border: "2px solid black", padding: "1px", margin: "10px", backgroundColor: "AliceBlue" }}>
@@ -13,12 +14,12 @@ export default function Counter() {
             
             {/* counter buttons and control */}
             <div style={{ padding: "5px 7px", margin: "2px" }}>
-                {/* Increase the counter */}
+                {/* increase the counter */}
                 <button onClick={() => setCount(count + 1)}
                 style={{ border: "2px solid black", borderRadius: "10px", padding: "7px 10px", margin: "10px", backgroundColor: "lightblue" }}>
                 Increase</button>
 
-                {/* Decrease the counter */}
+                {/* decrease the counter */}
                 <button onClick={() => setCount(count - 1)}
                 style={{ border: "2px solid black", borderRadius: "10px", padding: "7px 10px", margin: "10px", backgroundColor: "lightblue" }}>
                 Decrease</button>

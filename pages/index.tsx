@@ -11,7 +11,7 @@ export default function HomePage() {
 
       {/* explaining the website */}
       <p style={{ padding: "2px", margin: "20px" }}>
-        This app demonstrates my understanding of the foundational concepts of front-end development covered in Weeks 1 through 4.
+        This webpage demonstrates my understanding of the foundational concepts of front-end development covered in Weeks 1 through 4.
       </p>
       <p style={{ padding: "2px", margin: "20px" }}>
         Please select a component from the navigation buttons below:

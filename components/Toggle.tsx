@@ -9,6 +9,7 @@ export default function Toggle() {
     return (
     <div style={{
         border: "2px solid black", padding: "1px", margin: "10px",
+        //true/false to change background colour and text colour
         backgroundColor: darkMode ? "black" : "white",
         color: darkMode ? "white" : "black",
     }}>
