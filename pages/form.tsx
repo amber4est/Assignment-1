@@ -1,12 +1,12 @@
 import Form from "../components/Form";
 import Link from "next/link";
 
+//form page
 export default function FormPage() {
-  return (
-    <div style={{ padding: "2rem" }}>
-      <h2>Form Example</h2>
-      <Form />
-      <p><Link href="/">← Back to Home</Link></p>
-    </div>
-  );
+    return (
+        <div style={{ padding: "10px", textAlign: "center" }}>
+            <Form />
+            <p style={{ border: "2px solid black", padding: "1px", margin: "10px", backgroundColor: "orange" }}><Link href="/">Back to Home Page</Link></p>
+        </div>
+    );
 }

@@ -1,48 +1,37 @@
 import { useState } from "react";
 
 export default function Toggle() {
-  const [isVisible, setIsVisible] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  return (
-    <div
-      style={{
-        border: "2px solid black",
-        padding: "1rem",
-        margin: "10px",
+    //hidden texts
+    const [isVisible, setIsVisible] = useState(false);
+    //dark/light mode
+    const [darkMode, setDarkMode] = useState(false);
+    
+    return (
+    <div style={{
+        border: "2px solid black", padding: "1px", margin: "10px",
         backgroundColor: darkMode ? "black" : "white",
         color: darkMode ? "white" : "black",
-      }}
-    >
-      <h2>Toggle Button with Dark Mode</h2>
-
-      {/* Show/Hide toggle */}
-      <button
-        onClick={() => setIsVisible(!isVisible)}
-        style={{
-          padding: "8px 16px",
-          marginBottom: "10px",
-          marginRight: "10px",
-          cursor: "pointer",
-        }}
-      >
-        {isVisible ? "Hide" : "Show"}
-      </button>
-
-      {/* Dark Mode toggle */}
-      <button
-        onClick={() => setDarkMode(!darkMode)}
-        style={{
-            border: "1px solid black",
-          padding: "8px 16px",
-          marginBottom: "10px",
-        }}
-      >
+    }}>
+    
+        {/* header */}
+        <h2 style={{ padding: "5px 7px", margin: "2px", textDecoration: "underline" }}>Toggle Button with Dark Mode</h2>
+        
+        {/* show/hide toggle/button */}
+        <button onClick={() => setIsVisible(!isVisible)}
+        style={{ padding: "7px 12px", margin: "20px", backgroundColor: "LightPink", border: "2px solid black", borderRadius: "5px" }}>
+        {/* true/false to show either hide or show button */}
+        {isVisible ? "Hide Text" : "Show Hidden Text"}
+        </button>
+        
+        {/*dark mode toggle/button */}
+        <button onClick={() => setDarkMode(!darkMode)}
+        style={{ padding: "7px 12px", margin: "20px", backgroundColor: "LightPink", border: "2px solid black", borderRadius: "5px" }}>
+        {/* true/false to show either light mode or dark mode button */}
         {darkMode ? "Light Mode" : "Dark Mode"}
-      </button>
+        </button>
 
-      {/* Conditionally visible text */}
-      {isVisible && <p>This is the text that is part of the toggle button!</p>}
+        {/* hidden text */}
+        {isVisible && <p>This is top secret hidden text, don't forget to hide it again when you are done!</p>}
     </div>
   );
 }

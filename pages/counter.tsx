@@ -1,12 +1,12 @@
 import Counter from "../components/Counter";
 import Link from "next/link";
 
+//counter page
 export default function CounterPage() {
-  return (
-    <div style={{ padding: "2rem" }}>
-      <h2>Counter Example</h2>
-      <Counter />
-      <p><Link href="/">← Back to Home</Link></p>
-    </div>
-  );
+    return (
+        <div style={{ padding: "10px", textAlign: "center" }}>
+            <Counter />
+            <p style={{ border: "2px solid black", padding: "10px", margin: "10px", backgroundColor: "AliceBlue" }}><Link href="/">Back to Home Page</Link></p>
+        </div>
+    );
 }
