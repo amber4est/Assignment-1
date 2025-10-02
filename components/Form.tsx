@@ -10,7 +10,7 @@ export default function Form() {
         
         //check for nothing entered
         if (inputValue.trim() === "") {
-            setMessage("Please enter something.");
+            setMessage("Please enter a message");
         }
         //check for more than two characters
         else if (inputValue.trim().length <= 2){
@@ -43,6 +43,8 @@ export default function Form() {
             Submit
         </button>
         </form>
+        
+        {/* display message if text is entered */}
         {message && <p>{message}</p>}
     </div>
   );
